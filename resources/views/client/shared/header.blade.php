@@ -29,14 +29,14 @@
                 <div class="right-phone-box">
                     <p>{{trans('message.call us')}}: <a href="#"> +(84) 0384443456</a></p>
                 </div>
-                <!-- <div class="custom-select-box">
+                <div class="custom-select-box">
                     <button>
                         <a href="{{ route('lang',['lang' => 'vi']) }}">VI</a>
                     </button>
                     <button>
                         <a href="{{ route('lang',['lang' => 'en' ]) }}">EN</a>
                     </button>
-                </div> -->
+                </div>
                 <div class="our-link">
                     <ul>
                         @if(Auth::check())
