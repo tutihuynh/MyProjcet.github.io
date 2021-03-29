@@ -27,7 +27,7 @@
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                 <div class="right-phone-box">
-                    <p>{{trans('message.call us')}}: <a href="#"> +(84) 0384443456</a></p>
+                    <p>{{trans('message.call us')}}: <a href="#"> +(84) 0355032314</a></p>
                 </div>
                 <div class="custom-select-box">
                     <button>

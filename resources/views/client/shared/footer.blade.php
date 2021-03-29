@@ -37,13 +37,13 @@
                             <h4>{{trans('message.Contact Us')}}</h4>
                             <ul>
                                 <li>
-                                    <p><i class="fas fa-map-marker-alt"></i>{{trans('message.Address')}}: 100 Huy Cận <br>Hải Nam District<br> Hòa Nam Ward</p>
+                                    <p><i class="fas fa-map-marker-alt"></i>{{trans('message.Address')}}: Số 1A Tan Thai 3 <br>Man Thai District<br> Son Tra Ward</p>
                                 </li>
                                 <li>
-                                    <p><i class="fas fa-phone-square"></i>{{trans('message.Phone')}}: <a href="">+(84) 0384443456</a></p>
+                                    <p><i class="fas fa-phone-square"></i>{{trans('message.Phone')}}: <a href="">+(84) 0355032314</a></p>
                                 </li>
                                 <li>
-                                    <p><i class="fas fa-envelope"></i>{{trans('message.Email')}}: <a href="mailto:contactinfo@gmail.com">Huynhcongtam@gmail.com</a></p>
+                                    <p><i class="fas fa-envelope"></i>{{trans('message.Email')}}: <a href="mailto:contactinfo@gmail.com">tamhcgcd17190@fpt.edu.vn</a></p>
                                 </li>
                             </ul>
                         </div>

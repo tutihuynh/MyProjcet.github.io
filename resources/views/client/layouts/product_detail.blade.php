@@ -68,11 +68,11 @@
                             @if($quantity > 0)
                                 <a id="div-cart" class="btn hvr-hover " data-fancybox-close=""
                                    href="{{ url('/add-to-cart?product_id='.$product->id.'&quantity=1') }}">{{trans('message.Add to Cart')}}</a>
-                                <span class="ml-3">Hàng còn: {{$quantity}}</span>
+                                <span class="ml-3">In stock: {{$quantity}}</span>
                             @else
                                 <a id="div-cart" class="btn hvr-hover disabled" data-fancybox-close=""
                                    href="{{ url('/add-to-cart?product_id='.$product->id.'&quantity=1') }}">{{trans('message.Add to Cart')}}</a>
-                                <span class="ml-3 text-danger">Hàng còn: {{$quantity}}</span>
+                                <span class="ml-3 text-danger">In stock: {{$quantity}}</span>
                             @endif
                         </div>
                     </div>

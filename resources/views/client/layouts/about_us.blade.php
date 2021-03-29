@@ -5,7 +5,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6">
-				<h2 class="noo-sh-title">{{trans('message.We are')}} <span>TUTITADA Shop</span></h2>
+				<h2 class="noo-sh-title">{{trans('message.We are')}} <span>TuTiTaDa Shop</span></h2>
 				<p>"{{trans('message.Sed ut')}}
 				</p>
 			</div>

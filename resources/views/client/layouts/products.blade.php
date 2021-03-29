@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h2>PanDa Shop {{trans('message.slogin')}} 24/24</h2>
-                    <h2>{{trans('message.Phone')}}: 0384443456</h2>
+                    <h2>{{trans('message.Phone')}}: 0355032314</h2>
                     <ul class="breadcrumb">
                         <li class="breadcrumb-item"><a href="{{ url('/home') }}">{{trans('message.Home')}}</a></li>
                         <li class="breadcrumb-item active">{{trans('message.Shop')}}</li>
@@ -54,18 +54,18 @@
                     <!-- start prices -->
                     <div class="filter-brand-left mt-2">
                         <div class="title-left">
-                            <h3>Khoảng Giá</h3>
+                            <h3>Price range</h3>
                         </div>
                         <div class="">
                             <div class="">
                                 <div class="s">
                                     <form action="{{url('product-all')}}" method="GET">
-                                        <input class="form-control" name='min_price' type="text" maxlength="13" class="s" placeholder="₫ TỪ" >
+                                        <input class="form-control" name='min_price' type="text" maxlength="13" class="s" placeholder="$ From" >
                                         <div class=""></div>
                                         <br>
-                                        <input class="form-control" name="max_price" type="text" maxlength="13" class="shopee-price-range-filter__input" placeholder="₫ ĐẾN" ></div></div>
+                                        <input class="form-control" name="max_price" type="text" maxlength="13" class="shopee-price-range-filter__input" placeholder="$ To" ></div></div>
                                         <br>
-                                        <button type="submit" class="btn btn-block btn-primary">Áp dụng</button></div>
+                                        <button type="submit" class="btn btn-block btn-primary">Apply</button></div>
                                     </form>                                    
                                 </div>
                                 <!--  -->

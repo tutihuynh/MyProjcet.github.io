@@ -5,7 +5,7 @@
 @section('content')
 <div class="content_yield">
     <div class="row">
-        <h3 class="page_title">Slide</h3>
+        <h3 class="page_title">Effect</h3>
         <div class="col-md-12">
             @if(Session::has('message'))
             <div id="div-alert" style="position:absolute; right: 10px;" class="float-right mt-2 alert alert-success alert-dismissible show" role="alert" style="position: absolute;">

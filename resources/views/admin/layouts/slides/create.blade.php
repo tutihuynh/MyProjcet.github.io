@@ -44,7 +44,7 @@
                 </div>
                 <div class="form-group text-right">
                     <a class="btn btn-info mt-3" href="{{ route('slide.index') }}" title="back"><i class="fas fa-arrow-left"> View list</i></a>
-                    {{ Form::submit('Submit',['class' => 'font-weight-bold text-white btn bg-color-green mt-3']) }}
+                    {{ Form::submit('Save',['class' => 'font-weight-bold text-white btn bg-color-green mt-3']) }}
                 </div>
             </div>
         </div>
