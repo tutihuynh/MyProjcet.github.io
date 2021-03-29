@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+	
 Route::group(['namespace'=>'Client','prefix'=>'/'],function (){
 	Route::get('/home', 'HomeController@index');
 	Route::get('/about-us', 'HomeController@about');

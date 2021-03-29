@@ -1,6 +1,6 @@
 @extends('admin.shared.main')
 @section('title')
-TutiTada Shop - content
+TutiTada Shop - Brand
 @endsection
 @section('content')
 <div class="content_yield">

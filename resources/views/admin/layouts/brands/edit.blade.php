@@ -1,12 +1,12 @@
 @extends('admin.shared.main')
 @section('title')
-    Cập nhật
+    Update
 @endsection
 @section('content')
 <div class="content_yield">
 	{{ Form::open(['route'=>['brand.update',$brand->id],'method'=>'put','enctype '=>'multipart/form-data','class' => 'col-md-12 row']) }}
 	<div class="col-md-12 m-auto">
-		<h3 class="mb-5 font-weight-bold">Nhãn hiệu</h3>
+		<h3 class="mb-5 font-weight-bold">Brand</h3>
 		<div class="col-lg-10 col-md-12 col-sm-12 row">
 			<div class="form-group">
 				{{ Form::label('Brand: ','',['class' => 'font-weight-bold']) }}
