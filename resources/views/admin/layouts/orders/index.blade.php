@@ -1,6 +1,6 @@
 @extends('admin.shared.main')
 @section('title')
-    Panda electric shop - Đơn hàng
+    TuTiTaDa shop - Orders
 @endsection
 @section('content')
 <div class="content_yield">
@@ -44,7 +44,7 @@
 				<td class="text-center">
 					{{ Form::open(['route'=>['order.update',$order->id],'method'=>'put']) }}
 					<button class="btn btn-sm btn-success btn-confirmation" type="submit">
-						{{$order->order_status == 1 ? 'Đang chờ giao' : 'Đã giao Hàng'}}
+						{{$order->order_status == 1 ? 'Waiting for delivery' : 'Delivered'}}
 					</button>
 					{{ Form::close() }}
 				</td>

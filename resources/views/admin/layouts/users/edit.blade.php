@@ -1,6 +1,6 @@
 @extends('admin.shared.main')
 @section('title')
-Cập nhật
+	Update
 @endsection
 @section('content')
 <div class="content_yield">
@@ -37,7 +37,7 @@ Cập nhật
                 </select>
 			<div class="form-group text-right">
 				<a class="btn btn-info mt-3" href="{{ route('user.index') }}" title="back"><i class="fas fa-arrow-left"> View List</i></a>
-				{{ Form::submit('Save',['class' => 'font-weight-bold text-white btn bg-color-green mt-3']) }}
+				{{ Form::submit('Submit',['class' => 'font-weight-bold text-white btn bg-color-green mt-3']) }}
 			</div>
 		</div>
 	</div>

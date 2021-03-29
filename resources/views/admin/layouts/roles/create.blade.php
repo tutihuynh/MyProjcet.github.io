@@ -1,6 +1,6 @@
 @extends('admin.shared.main')
 @section('title')
-    Thêm mới
+    Add New
 @endsection
 @section('content')
     <div class="content_yield">

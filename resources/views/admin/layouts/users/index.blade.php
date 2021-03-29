@@ -1,6 +1,6 @@
 @extends('admin.shared.main')
 @section('title')
-    Panda electric shop - Người dùng
+    TuTiTaDa shop - User
 @endsection
 @section('content')
 <div class="content_yield">

@@ -1,6 +1,6 @@
 @extends('admin.shared.main')
 @section('title')
-    Chi tiết đơn hàng
+    Order details
 @endsection
 @section('content')
     <div class="content_yield">
