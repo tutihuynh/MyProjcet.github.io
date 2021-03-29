@@ -1,6 +1,6 @@
 @extends('admin.shared.main')
 @section('title')
-    Panda electric shop - Khách hàng
+    TuTITaDa shop - Customer
 @endsection
 @section('content')
 <div class="content_yield">
@@ -25,7 +25,7 @@
 		</div>
 
 	</div>
-{{--	<a href="{{ route('customer.create') }}" class="btn bg-color-green add_new_button"><i class="fas fa-plus"></i> Thêm mới</a>--}}
+{{--	<a href="{{ route('customer.create') }}" class="btn bg-color-green add_new_button"><i class="fas fa-plus"></i>Add New</a>--}}
 
 	<table class="table table_xk table-hover table-bordered">
 		<thead class="thead_green">

@@ -1,6 +1,6 @@
 @extends('admin.shared.main')
 @section('title')
-    Panda electric shop - Thể loại
+    TuTiTaDa shop - Category
 @endsection
 @section('content')
 <div class="content_yield">
