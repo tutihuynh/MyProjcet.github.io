@@ -279,8 +279,8 @@ class CartController extends Controller
         }
         return redirect($vnp_Url);
     }
-        $request->session()->forget('cart');    
-        return redirect('/cart-page');
+        $request->session()->forget('cart'); //xóa giỏ hàng   
+        return redirect('/cart-page'); // trả về trang cart page
 
 }
     function execPostRequest($url, $data)

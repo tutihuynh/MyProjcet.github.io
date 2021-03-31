@@ -78,13 +78,13 @@
                                         <a href="#">{{$item['name']}}</a>
                                     </td>
                                     <td class="price-pr">
-                                        <p>${{$item['price']}}</p>
+                                        <p>₫{{$item['price']}}</p>
                                     </td>
                                     <td class="quantity-box">
                                         <p>{{$item['quantity']}}</p>
                                     </td>
                                     <td class="total-pr">
-                                        <p>${{$item['price'] * $item['quantity']}}</p>
+                                        <p>₫{{$item['price'] * $item['quantity']}}</p>
                                     </td>
                                 </tr>
                             @endforeach
@@ -99,7 +99,7 @@
                         <tfoot>
                             <tr>
                                 <td colspan="4" class="text-right font-weight-bold">{{trans('message.Total amount')}}</td>
-                                <td colspan="1">${{$totalAmount ?? 0}}</td>
+                                <td colspan="1">₫{{$totalAmount ?? 0}}</td>
                             </tr>
                         </tfoot>
                     </table>
@@ -110,6 +110,10 @@
                     <h3 class="wuc-Customers font-weight-bold text-center text-info">{{trans('message.PAYMENT METHOD')}}</h3>
                     <input type="radio" name="payment_method" id="cod" value="1" checked/>
                     <label for="cod">{{trans('message.Cash')}}</label> <br>
+                    <input type="radio" name="payment_method" id="momo" value="2" checked/>
+                    <label for="momo">Momo Payment</label> <br>
+                    <input type="radio" name="payment_method" id="vnpay" value="3" checked/>
+                    <label for="vnpay">Online payment</label> <br>
                 </div>
             </div>
             <div class="col-12 shopping-box">

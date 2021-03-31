@@ -53,7 +53,7 @@
     <script src="{{asset('front_assets/js/jquery.superslides.min.js')}}"></script>
     <script src="{{asset('front_assets/js/bootstrap-select.js')}}"></script>
     <script src="{{asset('front_assets/js/inewsticker.js')}}"></script>
-    <script src="{{asset('front_assets/js/bootsnav.js.')}}"></script>
+    <script src="{{asset('front_assets/js/bootsnav.js')}}"></script>
     <script src="{{asset('front_assets/js/images-loded.min.js')}}"></script>
     <script src="{{asset('front_assets/js/isotope.min.js')}}"></script>
     <script src="{{asset('front_assets/js/owl.carousel.min.js')}}"></script>
