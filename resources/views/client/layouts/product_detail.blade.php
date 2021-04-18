@@ -47,7 +47,7 @@
                 <div class="single-product-details">
                     <h2>{{$product->name}}</h2>
                     @if($product->promotion_price != null)
-                    <h4> <strike class="text-secondary">${{$product->price}}</strike> ${{$product->promotion_price}}</h4>
+                    <h4> <strike class="text-secondary">	₫{{$product->price}}</strike> 	₫{{$product->promotion_price}}</h4>
                     @else
                     <h4>{{$product->price}}</h4>
                     @endif

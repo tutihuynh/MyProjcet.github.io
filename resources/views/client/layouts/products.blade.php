@@ -6,7 +6,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>PanDa Shop {{trans('message.slogin')}} 24/24</h2>
+                    <h2>TuTiTaDa Shop {{trans('message.slogin')}} 24/24</h2>
                     <h2>{{trans('message.Phone')}}: 0355032314</h2>
                     <ul class="breadcrumb">
                         <li class="breadcrumb-item"><a href="{{ url('/home') }}">{{trans('message.Home')}}</a></li>
@@ -60,10 +60,10 @@
                             <div class="">
                                 <div class="s">
                                     <form action="{{url('product-all')}}" method="GET">
-                                        <input class="form-control" name='min_price' type="text" maxlength="13" class="s" placeholder="$ From" >
+                                        <input class="form-control" name='min_price' type="text" maxlength="13" class="s" placeholder="₫ From" >
                                         <div class=""></div>
                                         <br>
-                                        <input class="form-control" name="max_price" type="text" maxlength="13" class="shopee-price-range-filter__input" placeholder="$ To" ></div></div>
+                                        <input class="form-control" name="max_price" type="text" maxlength="13" class="shopee-price-range-filter__input" placeholder="₫ To" ></div></div>
                                         <br>
                                         <button type="submit" class="btn btn-block btn-primary">Apply</button></div>
                                     </form>                                    
@@ -103,7 +103,7 @@
                                                             @if($item->promotion_price != null)
                                                             <div>
                                                                 <h5 style="float: left;padding-right: 10px;">{{$item->promotion_price}}₫ </h5>
-                                                                <h5 class="text-secondary"><strike>₫{{$item->price}}</strike></h5>
+                                                                <h5 class="text-secondary"><strike>{{$item->price}}₫</strike></h5>
                                                             </div>
                                                             @else
                                                             <h5>{{$item->price}}₫</h5>
