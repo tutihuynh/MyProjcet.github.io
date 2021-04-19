@@ -40,7 +40,7 @@
                 <div class="our-link">
                     <ul>
                         @if(Auth::check())
-                            <li><a class="trigger-btn" href="#">{{ Auth::user()->name }}</a></li>
+                            <li><a class="trigger-btn" href="{{ route('profile', Auth::id()) }}">{{ Auth::user()->name }}</a></li>
                             <li>
                                 <a class="trigger-btn" href="{{ route('client.logout') }}">
                                     {{ __('Logout') }}

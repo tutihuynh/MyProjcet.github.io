@@ -30,6 +30,17 @@ Route::group(['namespace'=>'Client','prefix'=>'/'],function (){
     // send gmail
     Route::get('/contact-us', 'HomeController@contact');
     Route::post('/contact-us', 'HomeController@sendContact')->name('sendcontact');
+    
+
+
+
+
+
+    // Profile Customer
+    Route::get('profile/{id}', 'HomeController@profile')->name('profile');
+    Route::get('profile/{id}/edit', 'HomeController@editProfile')->name('edit-profile');
+    Route::post('profile/{id}/update', 'HomeController@updateProfile')->name('update-profile');
+    Route::get('purchase-history', 'HomeController@purchaseHistory')->name('purchase-history');
 });
 Route::group(['middleware' => ['web']], function () {
 	Route::get('lang/{lang}','LanguageController@changelang')->name('lang');
@@ -43,7 +54,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('admin/login', ['as'=>'admin.login','uses'=>'Admin\LoginController@adminLogin']);
     Route::get('admin/logout', 'Admin\LoginController@adminLogout');
     Route::post('admin/logout', ['as'=>'admin.logout','uses'=>'Admin\LoginController@adminLogout']);
-	
+    
     Route::middleware(['checkuser'])->group(function () {
 		Route::group(['namespace'=>'Admin','prefix'=>'/'],function (){
 	    	Route::get('/admin/dashboard', 'DashboardController@index');
@@ -126,14 +137,14 @@ Route::group(['middleware' => ['web']], function () {
 				Route::get('', [
 					'as' => 'customer.index',
 					'uses' => 'CustomerController@index',
-					// 'middleware' => 'checkacl:view_customer'
+					'middleware' => 'checkacl:view_customer'
 
 					
 				]);
 				Route::get('/create', [
 					'as' => 'customer.create',
 					'uses' => 'CustomerController@create',
-					// 'middleware' => 'checkacl:create_customer'
+					'middleware' => 'checkacl:create_customer'
 
 					
 				]);
@@ -141,7 +152,7 @@ Route::group(['middleware' => ['web']], function () {
 				Route::get('/customer/{id}', [
 					'as' => 'customer.edit',
 					'uses' => 'CustomerController@edit',
-					// 'middleware' => 'checkacl:edit_customer'
+					'middleware' => 'checkacl:edit_customer'
 
 					
 				]);
@@ -149,7 +160,7 @@ Route::group(['middleware' => ['web']], function () {
 				Route::delete('/delete', [
 					'as' => 'customer.delete',
 					'uses' =>'CustomerController@destroy',
-					// 'middleware' => 'checkacl:delete_customer'
+					'middleware' => 'checkacl:delete_customer'
 
 					
 				]);		

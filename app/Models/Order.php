@@ -11,10 +11,10 @@ class Order extends Model
     protected $timestrap = true;    
     public function order_details()
     {
-    	return $this->belongsto('App\Models\OrderDetail');
+    	return $this->hasMany('App\Models\OrderDetail');
     } 
     public function customers()
     {
-    	return $this->belongsto('App\Models\Customer', 'customer_id');
+    	return $this->belongsTo('App\Models\Customer', 'customer_id');
     } 
 }

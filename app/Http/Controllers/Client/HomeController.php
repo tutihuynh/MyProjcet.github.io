@@ -10,6 +10,12 @@ use App\Repositories\Slide\SlideInterface;
 use Illuminate\Http\Request;
 use Mail;
 use Session;
+use Auth;
+use Validator;
+use DB;
+use Illuminate\Support\Facades\Hash;
+use App\Models\User;
+
 class HomeController extends Controller
 {
     private $productRepository;
@@ -128,5 +134,105 @@ class HomeController extends Controller
     public function destroy($id)
     {
         //
+    }
+//view profile
+    public function profile($id)
+    {
+        $customer = Auth::user();
+
+        $data = [
+            'customer' => $customer,
+        ];
+
+        return view('client.layouts.profile', $data);
+    } 
+// view edit profile
+    public function editProfile($id)
+    {
+        $customer = Auth::user();
+
+        $data = [
+            'customer' => $customer,
+        ];
+
+        return view('client.layouts.edit-profile', $data);
+    }
+// update profile
+    public function updateProfile(Request $request, $id)
+    {
+        $rules = [
+            'full_name' => 'required|string|max:255',
+            'address' => 'required|max:255',
+            'phone_no' => 'required|size:10',
+            'email' => 'required|string|email|max:255',
+        ];
+
+        if ($request->current_password && $request->new_password) {
+            $rules = [
+                'full_name' => 'required|string|max:255',
+                'address' => 'required|max:255',
+                'phone_no' => 'required|size:10',
+                'email' => 'required|string|email|max:255',
+                'current_password' => 'string|min:8',
+                'new_password' => 'string|min:8',
+            ];
+        }
+
+        $validator = Validator::make($request->all(), $rules);
+        if($validator->fails())
+        {
+            return redirect()->back()->withErrors($validator)->withInput();
+        }
+
+        DB::beginTransaction();
+        try {
+            $customer = Auth::user();
+
+            if ($request->current_password && $request->new_password) {
+                if (Hash::check($request->current_password, $customer->password)) {
+                    $customer->update([
+                        'password' => Hash::make($request->new_password),
+                    ]);
+                }
+                else {
+                    return redirect()->back()->with('notificationFail', 'The current password is not correct!');
+                }
+            }
+
+            $check_has_email = User::whereNotIn('id', [$id])->where('email', $request->email)->first();
+            if (!$check_has_email) {
+                $customer->update([
+                    'email' => $request->email,
+                ]);
+
+                $customer->customer->update([
+                    'email' => $request->email,
+                    'full_name' => $request->full_name,
+                    'address' => $request->address,
+                    'phone_no' => $request->phone_no,
+                ]);
+            }
+            else {
+                return redirect()->back()->with('notificationFail', 'Email already exists!');
+            }
+
+            DB::commit();
+            return redirect()->route('profile', $id)->with('notificationSuccess', 'Successfully updated!');
+        } catch (Exception $e) {
+            DB::rollBack();
+            throw new Exception($e->getMessage());
+            return redirect()->back()->with('notificationFail', 'Update information failed!');
+        }
+    }
+// view list purchase history
+    public function purchaseHistory()
+    {
+        $orders = Auth::user()->customer->orders()->paginate(10);
+
+        $data = [
+            'orders' => $orders,
+        ];
+
+        return view('client.layouts.purchase-history', $data);
     }
 }
